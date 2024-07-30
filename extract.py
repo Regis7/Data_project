@@ -23,7 +23,7 @@ class Extractor:
             print(f"Error extracting csv data: {e}")
             return None
         
-    def extract_json(self, file_path):
+    def extract_json(file_path):
         try:
             with open(file_path, 'r') as file:
                 data = json.load(file)

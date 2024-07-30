@@ -13,6 +13,9 @@ if __name__ == "__main__":
     input_file_path = 'input_file.csv'
     output_file_path = 'output_file.csv'
 
+    file_path = 'json_file.JSON'
+    output_file_path_json = 'output_file.json'
+
     source_type = "csv"
     source = "input_file.csv"
 
@@ -21,12 +24,12 @@ if __name__ == "__main__":
     if extracted_csv_data is not None:
         transformed_data = transform.Transfoermer.transform_csv(extracted_csv_data)
         if transformed_data is not None:
-            load.load(transformed_data, output_file_path)
+            load.Loader.load_csv(transformed_data, output_file_path)
 
     elif extracted_json_data is not None:
         transformed_data = transform.Transfoermer.transform_json(extracted_json_data)
         if transformed_data is not None:
-            load.load(transformed_data, file_path)
+            load.Loader.load_json(transformed_data, output_file_path_json)
 
     # JSON
 

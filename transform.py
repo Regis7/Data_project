@@ -21,7 +21,7 @@ class Transfoermer:
             # Example transformation: Convert all column names to lower case
             transformed_data.columns = [col.lower() for col in transformed_data.columns]
             
-            print("Data transformation complete.")
+            print(" CSV Data transformation complete.")
             return transformed_data
         except Exception as e:
             print(f"Error transforming csv data: {e}")
@@ -30,6 +30,7 @@ class Transfoermer:
     def transform_json(data):
         try:
             transformed_data = data
+            print(" JSON Data transformation complete.")
             return transformed_data
         except Exception as e:
             print(f"Error transforming json data: {e}")
@@ -38,6 +39,7 @@ class Transfoermer:
     def transform_sql(data):
         try:
             transformed_data = data
+            print(" SQL Data transformation complete.")
             return transformed_data
         except Exception as e:
             print(f"Error transfroming sql data: {e}")
